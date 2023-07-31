@@ -1,198 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet">
-    <title>Skinviewer - Your advanced CS:GO skin view website</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Skinviewer - Your advanced CS:GO skin view website</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
+
 <body>
-    <header>
-        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                <a href="https://flowbite.com" class="flex items-center">
-                    <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
-                </a>
-                <div class="flex items-center lg:order-2">
-                    <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a>
-                    
-                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                       
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                        <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Popular skins</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">RSS feed</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <a href="https://flowbite.com" class="flex items-center">
+          <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
+          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+          <a href="#"
+            class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log
+            in</a>
 
-    <section class="bg-white dark:bg-gray-900">
-        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Skinviewer</h2>
-                <p class="mb-4"> Skinviewer unlocks the multi-billion-dollar skins economy for game developers and players everywhere. Our team of passionate gamers believes a borderless gaming world is a better gaming world, and we’re building the infrastructure to make it easy for everyone to thrive in the open system of the future. </p>
-                <p>Skinviewer is a marketplace to trade virtual items and technology for building metaverses. Based on the latest Newzoo report it’s a Top-3 blockchain-based marketplace.
-                    Skinviewer builds bridges between real and virtual worlds by creating a cross-chain platform that accumulates multiple metaverses for brands, influencers, video games, eSports organizations, broadcasters, and all kinds of entities. Skinviewer is connecting the entertainment industry with the global metaverse. </p>
-            </div>
-            <div class="grid grid-cols-2 gap-4 mt-8">
-                <img class="w-full rounded-lg" src="/assets/dragonLore.png" alt="office content 1">
-                <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/ak_empress.png" alt="office content 2">
-            </div>
+          <button data-collapse-toggle="mobile-menu-2" type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu-2" aria-expanded="false">
+
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
         </div>
-    </section>
+        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Popular
+                skins</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">RSS
+                feed</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <!-- ====== Cards Section Start -->
-<section class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[120px] lg:pb-20">
-    <h1> View our latest skins</h1>
+  <div id="rss-feed"></div>
+
+  <section class="bg-white dark:bg-gray-900">
+    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Skinviewer</h2>
+        <p class="mb-4"> Skinviewer unlocks the multi-billion-dollar skins economy for game developers and players
+          everywhere. Our team of passionate gamers believes a borderless gaming world is a better gaming world, and
+          we’re building the infrastructure to make it easy for everyone to thrive in the open system of the future.
+        </p>
+        <p>Skinviewer is a marketplace to trade virtual items and technology for building metaverses. Based on the
+          latest Newzoo report it’s a Top-3 blockchain-based marketplace.
+          Skinviewer builds bridges between real and virtual worlds by creating a cross-chain platform that accumulates
+          multiple metaverses for brands, influencers, video games, eSports organizations, broadcasters, and all kinds
+          of entities. Skinviewer is connecting the entertainment industry with the global metaverse. </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+        <img class="w-full rounded-lg" src="/assets/dragonLore.png" alt="office content 1">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/ak_empress.png" alt="office content 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Cards Section Start -->
+  <section class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+    <h1 class="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-900 flex-center text-center ">View our latest skins</h1>
     <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4 md:w-1/2 xl:w-1/3">
           <div class="mb-10 overflow-hidden rounded-lg bg-white">
-            <img
-              src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg"
-              alt="image"
-              class="w-full"
-            />
+            <img src="../assets/butterfly.png" alt="image" class="w-full" />
             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
               <h3>
-                <a
-                  href="javascript:void(0)"
-                  class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-                >
-                  50+ Best creative website themes & templates
+                <a href="javascript:void(0)"
+                  class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
+                  Butterfly knife - Fade
                 </a>
               </h3>
               <p class="text-body-color mb-7 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
-                Lorem consectetur adipiscing elit.
+                The Fade - This is a custom-designed balisong, commonly known as a butterfly knife. The defining
+                characteristic of this weapon is the fan-like opening of a freely pivoting blade,
+                allowing rapid deployment or concealment. As a result, butterfly knives are outlawed in many countries.
               </p>
-              <a
-                href="javascript:void(0)"
-                class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
-              >
+              <a id="previewButton" href="javascript:void(0)"
+                class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white">
                 Preview in 3D
               </a>
+
+              <div id="popupContainer" style="display: none;">
+                <a-scene embedded aframe-injected="true" arjs="sourceType: webcam;" camera>
+                  <a-entity
+                    id="cameraContainer"
+                    position="0 200 0"
+                    rotation="0 0 0"
+                  >
+                    <a-camera></a-camera>
+                  </a-entity>
+                  
+                  <a-entity
+                    id="rotatingObject"
+                    obj-model="obj: url(../assets/objects/butterfly_knife/butterfly.obj); mtl: url(../assets/objects/butterfly_knife/butterfly.mtl); stl: url(../assets/objects/butterfly.stl)"
+                    rotation="0 0 0"
+                  ></a-entity>
+                </a-scene>
+                
+              </div>
+
+
             </div>
           </div>
         </div>
-        <div class="w-full px-4 md:w-1/2 xl:w-1/3">
-          <div class="mb-10 overflow-hidden rounded-lg bg-white">
-            <img
-              src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
-              alt="image"
-              class="w-full"
-            />
-            <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
-              <h3>
-                <a
-                  href="javascript:void(0)"
-                  class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-                >
-                  The ultimate UX and UI guide to card design
+          <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-lg bg-white">
+              <img src="../assets/lotus.png" alt="image"
+                class="w-full" />
+              <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+                <h3>
+                  <a href="javascript:void(0)"
+                    class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
+                    Ak-47  - Wild Lotus
+                  </a>
+                </h3>
+                <p class="text-body-color mb-7 text-base leading-relaxed">
+                  Powerful and reliable, the AK-47 is one of the most popular assault rifles in the world. It is most deadly in short, controlled bursts of fire. A custom paint job of an orange lotus has been hand painted over a green base. Muck or nettles
+ 
+The St. Marc Collection
+                </p>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white">
+                  Preview in 3D
                 </a>
-              </h3>
-              <p class="text-body-color mb-7 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
-                Lorem consectetur adipiscing elit.
-              </p>
-              <a
-                href="javascript:void(0)"
-                class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
-              >
-              Preview in 3D
-              </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 xl:w-1/3">
-          <div class="mb-10 overflow-hidden rounded-lg bg-white">
-            <img
-              src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-              alt="image"
-              class="w-full"
-            />
-            <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
-              <h3>
-                <a
-                  href="javascript:void(0)"
-                  class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-                >
-                  Creative Card Component designs graphic elements
+          <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-lg bg-white">
+              <img src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg" alt="image"
+                class="w-full" />
+              <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+                <h3>
+                  <a href="javascript:void(0)"
+                    class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
+                    Creative Card Component designs graphic elements
+                  </a>
+                </h3>
+                <p class="text-body-color mb-7 text-base leading-relaxed">
+                  Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
+                  Lorem consectetur adipiscing elit.
+                </p>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white">
+                  Preview in 3D
                 </a>
-              </h3>
-              <p class="text-body-color mb-7 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
-                Lorem consectetur adipiscing elit.
-              </p>
-              <a
-                href="javascript:void(0)"
-                class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
-              >
-              Preview in 3D
-              </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
   <!-- ====== Cards Section End -->
-  
 
-    <section>
-        <h1> SKin viewer </h1>
-    </section>
-    
-    <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+
+
+  <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
-                <img src="/assets/logoSite.png" class="h-8 mr-3" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
-            </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Skinviewer™</a>. All Rights Reserved.</span>
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+          <img src="/assets/logoSite.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+          class="hover:underline">Skinviewer™</a>. All Rights Reserved.</span>
     </div>
-</footer>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>

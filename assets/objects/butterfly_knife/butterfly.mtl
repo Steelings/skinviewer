@@ -1,0 +1,66 @@
+# Blender MTL File: 'ButterflyKnife.blend'
+# Material Count: 5
+
+newmtl Material.006
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Blade\\Blade_Albedo.jpg
+map_Ns Blade\\Blade_Roughness.jpg
+refl Blade\\Blade_Metalness.jpg
+
+newmtl Material.007
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Bolts\\Bolts_Albedo.jpg
+map_Ns Bolts\\Bolts_Roughness.jpg
+refl Bolts\\Bolts_Metalness.jpg
+
+newmtl Material.008
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Handle\\Handle_Albedo.jpg
+map_Ns Handle\\Handle_Roughness.jpg
+
+newmtl Material.009
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd LockPin\\LockPin_Albedo.jpg
+map_Ns LockPin\\LockPin_Roughness.jpg
+refl LockPin\\LockPin_Metalness.jpg
+
+newmtl Material.010
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Screws\\Screws_Albedo.jpg
+map_Ns Screws\\Screws_Roughness.jpg
+refl Screws\\Screws_Metalness.jpg

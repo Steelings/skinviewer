@@ -1,0 +1,11 @@
+Model Information:
+* title:	CSGO AK47 WILD LOTUS
+* source:	https://sketchfab.com/3d-models/csgo-ak47-wild-lotus-0af74d693a014c4d9fe5538b99dc0355
+* author:	WoodenManufacturing (https://sketchfab.com/WoodenManufacturing)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "CSGO AK47 WILD LOTUS" (https://sketchfab.com/3d-models/csgo-ak47-wild-lotus-0af74d693a014c4d9fe5538b99dc0355) by WoodenManufacturing (https://sketchfab.com/WoodenManufacturing) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
