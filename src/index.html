@@ -6,11 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
   <title>Skinviewer - Your advanced CS:GO skin view website</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  
 </head>
 
 <body>
+
+
+ 
   <header>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
@@ -102,10 +107,14 @@
   <section class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[120px] lg:pb-20">
     <h1 class="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-900 flex-center text-center ">View our latest skins</h1>
     <div class="container mx-auto">
-      <div class="-mx-4 flex flex-wrap">
+      <div class="-mx-4 flex flex-wrap ">
         <div class="w-full px-4 md:w-1/2 xl:w-1/3">
-          <div class="mb-10 overflow-hidden rounded-lg bg-white">
-            <img src="../assets/butterfly.png" alt="image" class="w-full" />
+          <div class="mb-10 overflow-hidden rounded-lg bg-white border">
+            
+            <div class="image-container">
+            <img id="staticImage" src="../assets/butterfly.png" alt="image" class="w-full" style="display: block;"/>
+            </div>
+
             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
               <h3>
                 <a href="javascript:void(0)"
@@ -118,20 +127,29 @@
                 characteristic of this weapon is the fan-like opening of a freely pivoting blade,
                 allowing rapid deployment or concealment. As a result, butterfly knives are outlawed in many countries.
               </p>
-              <a id="previewButton" href="javascript:void(0)"
+
+
+               
+              <button id="previewButton"
                 class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white">
                 Preview in 3D
-              </a>
+            </button>
 
-              <div id="popupContainer" style="display: none;">
-                <a-scene embedded aframe-injected="true" arjs="sourceType: webcam;" camera>
+              
+             
+              <div id="aframeScene" class="w-98 h-96">
+
+              
+                <a-scene class="aframebox" embedded>
                   <a-entity
                     id="cameraContainer"
-                    position="0 200 0"
+                    position="50 230 0"
                     rotation="0 0 0"
                   >
                     <a-camera></a-camera>
                   </a-entity>
+
+                  
                   
                   <a-entity
                     id="rotatingObject"
@@ -139,15 +157,17 @@
                     rotation="0 0 0"
                   ></a-entity>
                 </a-scene>
-                
               </div>
+              
+                
+             
 
 
             </div>
           </div>
         </div>
           <div class="w-full px-4 md:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-lg bg-white">
+            <div class="mb-10 overflow-hidden rounded-lg bg-white border">
               <img src="../assets/lotus.png" alt="image"
                 class="w-full" />
               <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
@@ -170,7 +190,7 @@ The St. Marc Collection
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-lg bg-white">
+            <div class="mb-10 overflow-hidden rounded-lg bg-white border">
               <img src="../assets/dragonLore.png" alt="image"
                 class="w-full" />
               <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">

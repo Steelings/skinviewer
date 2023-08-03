@@ -21,12 +21,6 @@ fetch('RSS_FEED_URL')
 
 
 
-function showPopup() {
-    var popupContainer = document.getElementById("popupContainer");
-    popupContainer.style.display = "block";
-  }
-  
-  document.getElementById("previewButton").addEventListener("click", showPopup);
 
   function rotateObject() {
     const rotatingEntity = document.getElementById("rotatingObject");

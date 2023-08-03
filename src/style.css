@@ -1,0 +1,19 @@
+.aframe-container {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+.image-container {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.aframebox {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    
+}
+
