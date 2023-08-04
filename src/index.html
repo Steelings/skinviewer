@@ -9,7 +9,7 @@
   <link href="style.css" rel="stylesheet">
   <title>Skinviewer - Your advanced CS:GO skin view website</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 </head>
 
 <body>
@@ -85,23 +85,25 @@
   <section class="bg-white dark:bg-gray-900">
     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
       <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Skinviewer</h2>
-        <p class="mb-4"> Skinviewer unlocks the multi-billion-dollar skins economy for game developers and players
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white" id="title">Skinviewer</h2>
+        <p class="mb-4" id="paragraph1"> Skinviewer unlocks the multi-billion-dollar skins economy for game developers and players
           everywhere. Our team of passionate gamers believes a borderless gaming world is a better gaming world, and
           we’re building the infrastructure to make it easy for everyone to thrive in the open system of the future.
         </p>
-        <p>Skinviewer is a marketplace to trade virtual items and technology for building metaverses. Based on the
+        <p id="paragraph2">Skinviewer is a marketplace to trade virtual items and technology for building metaverses. Based on the
           latest Newzoo report it’s a Top-3 blockchain-based marketplace.
           Skinviewer builds bridges between real and virtual worlds by creating a cross-chain platform that accumulates
           multiple metaverses for brands, influencers, video games, eSports organizations, broadcasters, and all kinds
           of entities. Skinviewer is connecting the entertainment industry with the global metaverse. </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
-        <img class="w-full rounded-lg" src="/assets/dragonLore.png" alt="office content 1">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/ak_empress.png" alt="office content 2">
+        <img class="w-full rounded-lg" src="/assets/dragonLore.png" alt="office content 1" id="image1">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/ak_empress.png" alt="office content 2" id="image2">
       </div>
     </div>
   </section>
+
+  
 
   <!-- ====== Cards Section Start -->
   <section class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[120px] lg:pb-20">
