@@ -11,9 +11,22 @@
 }
 
 .aframebox {
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     margin: auto;
-    
+    display: inline-block;
+   
 }
 
+.dlorebox {
+    height: 450px;
+    width: 450px;
+    margin: auto;
+    display: inline-block;
+}
+
+@media (max-width:800px) {
+    .aframebox {
+      width: max-content;
+    }
+  }
