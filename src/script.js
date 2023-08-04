@@ -3,8 +3,8 @@ const timeline = gsap.timeline();
 timeline.from('#title', {
   opacity: 0,
   scale: 0.5,
-  x: -1000,
-  duration: 2,
+  x: -800,
+  duration: 0.8,
   delay: 0.5,
   ease: 'expo.out'
 });
@@ -13,7 +13,7 @@ timeline.from('#paragraph1', {
   opacity: 0,
   scale: 0.5,
   z: 1000,
-  duration: 1.5,
+  duration: 0.5,
   ease: 'expo.out'
 });
 
@@ -21,10 +21,10 @@ timeline.from('#paragraph2', {
   opacity: 0,
   scale: 0.5,
   z: 1000,
-  duration: 1.5,
-  ease: 'expo.out'
+  duration: 0.5,
+  ease: 'expo.out',
+  delay: 0.25 
 });
-
 
 timeline.from('#image1', {
   opacity: 0,
@@ -39,7 +39,7 @@ timeline.from('#image2', {
   opacity: 0,
   scale: 0.5,
   x: 1000,
-  y: 500,
+  y: 5000,
   duration: 1,
   ease: 'expo.out'
 });
