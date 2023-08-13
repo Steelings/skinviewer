@@ -123,3 +123,29 @@ fetch('RSS_FEED_URL')
 
   const cameraContainer = document.getElementById("cameraContainer");
 cameraContainer.setAttribute("rotation", { x: -90, y: 0, z: 0 });
+
+
+// Function to animate the footer
+function animateFooter() {
+  // Select the footer element
+  const footer = document.querySelector('footer');
+
+  // Check if the footer element exists
+  if (footer) {
+    // Set initial opacity to 0
+    gsap.set(footer, { opacity: 0 });
+
+    // Define the animation
+    gsap.to(footer, {
+      opacity: 1,
+      duration: 2, // Animation duration
+      ease: "power2.inOut", // Easing function
+      scrollTrigger: {
+        trigger: footer, // Use the footer element as the trigger
+        start: "top 80%", // Animation starts when 80% of the footer is visible
+        end: "bottom top", // Animation ends when the footer is fully in view
+        toggleActions: "play none none reverse" // Play the animation when scrolling down and reverse it when scrolling up
+      }
+    });
+  }
+}

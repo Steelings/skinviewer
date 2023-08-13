@@ -10,6 +10,7 @@
   <title>Skinviewer - Your advanced CS:GO skin view website</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -139,7 +140,7 @@
 
               
              
-              <div id="aframeScene" class="w-98 h-96">
+              <div id="aframeScene1" class="w-98 h-96">
 
               
                 <a-scene id="aframeBox" class="aframebox" embedded>
@@ -148,7 +149,6 @@
                     id="cameraContainer"
                     position="50 230 0"
                     rotation="0 0 0"
-                    wasd-controls="acceleration: 1500; fly: true;"
                   >
                     <a-camera></a-camera>
                   </a-entity>
@@ -191,7 +191,7 @@ The St. Marc Collection
                 Hide 3D Preview
             </button>
 
-              <div id="aframeScene" class="w-98 h-96">
+              <div id="aframeScene2" class="w-98 h-96">
 
               
                 <a-scene id="aframeBoxAk" class="aframebox" embedded>
@@ -200,8 +200,7 @@ The St. Marc Collection
                     position="0 400 0"
                     rotation="0 0 0"
                     camera
-                    look-controls
-                    wasd-controls="acceleration: 1500; fly: true;"
+                    
                   >
                     <a-camera></a-camera>
                   </a-entity>
@@ -242,15 +241,13 @@ The Cobblestone Collection
                 Hide 3D Preview
             </button>
 
-              <div>
+            <div id="aframeScene3" class="w-98 h-96">
 
               
                 <a-scene id="aframeBoxDlore" class="dlorebox" embedded>
                     <!-- Camera -->
                     <a-entity
                       camera
-                      look-controls
-                      wasd-controls
                       position="0 0 0"
                     ></a-entity>
         
@@ -271,6 +268,55 @@ The Cobblestone Collection
       </div>
   </section>
   <!-- ====== Cards Section End -->
+
+  <section class="bg-gray-100 py-8">
+    <div class="container mx-auto">
+      <div class="flex items-center mb-4">
+      <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
+      <h2 class="text-4xl font-semibold mb-4 dark:text-gray-900 text-gray-900">Popular CS:GO Items</h2>
+    </div>
+      <div class="carousel-container overflow-x-auto"> 
+      <div class="flex gap-4">
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/redline_popular1.png" alt="CS:GO Item 1" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Redline </p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Asiimov</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Asiimov</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Asiimov</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Asiimov</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Asiimov</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Asiimov</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+          <p class="text-center">Ak-47 | Asiimov</p>
+        </div>
+
+        
+        
+      </div>
+    </div>
+    </div>
+  </section>
+  
 
 
 
@@ -306,6 +352,7 @@ The Cobblestone Collection
     </div>
   </footer>
   <script src="script.js"></script>
+
 </body>
 
 </html>
