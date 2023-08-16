@@ -29,8 +29,8 @@ timeline.from('#paragraph2', {
 timeline.from('#image1', {
   opacity: 0,
   scale: 0.5,
-  x: 1000,
-  y: 500,
+  x: 100,
+  y: 50,
   duration: 1,
   ease: 'expo.out'
 });
@@ -38,8 +38,8 @@ timeline.from('#image1', {
 timeline.from('#image2', {
   opacity: 0,
   scale: 0.5,
-  x: 1000,
-  y: 5000,
+  x: 50,
+  y: 200,
   duration: 1,
   ease: 'expo.out'
 });
@@ -82,6 +82,7 @@ function toggleAFrameBoxVisibilityDlore() {
     previewButtonDlore.textContent = "Show 3D Preview";
   }
 }
+
 
 
 const aframeBoxDlore = document.getElementById("aframeBoxDlore");

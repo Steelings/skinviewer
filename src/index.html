@@ -9,18 +9,18 @@
   <link href="style.css" rel="stylesheet">
   <title>Skinviewer - Your advanced CS:GO skin view website</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
 
- 
+
   <header>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-        <a href="https://flowbite.com" class="flex items-center">
+        <a href="index.html" class="flex items-center">
           <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
         </a>
@@ -45,7 +45,7 @@
                 clip-rule="evenodd"></path>
             </svg>
           </button>
-        </div> 
+        </div>
         <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
@@ -54,7 +54,7 @@
                 aria-current="page">Home</a>
             </li>
             <li>
-              <a href="#"
+              <a href="index.html#popular-section"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Popular
                 skins</a>
             </li>
@@ -63,11 +63,11 @@
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
             </li>
             <li>
-              <a href="#"
+              <a href="about.html"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
             </li>
             <li>
-              <a href="#"
+              <a href="../rss/rss.xml"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">RSS
                 feed</a>
             </li>
@@ -81,41 +81,68 @@
     </nav>
   </header>
 
-  <div id="rss-feed"></div>
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-md sm:text-center">
+        <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">Subscribe to
+          our RSS-feed</h2>
+        <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">Stay updated
+          with the latest skin additions to our site, for free!</p>
+        <form action="../rss/rss.xml">
+          <div class="flex justify-center mx-auto mb-3 space-x-4 max-w-screen-sm sm:flex sm:space-x-2 items-center">
+            <a href="../rss/rss.xml">
+              <img src="../assets/rss.png" class="w-10 h-10">
+            </a>
+            <a href="../rss/rss.xml" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Subscribe
+            </a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
 
   <section class="bg-white dark:bg-gray-900">
     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
       <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white" id="title">Skinviewer</h2>
-        <p class="mb-4" id="paragraph1"> Skinviewer unlocks the multi-billion-dollar skins economy for game developers and players
+        <p class="mb-4" id="paragraph1"> Skinviewer unlocks the multi-billion-dollar skins economy for game developers
+          and players
           everywhere. Our team of passionate gamers believes a borderless gaming world is a better gaming world, and
           we’re building the infrastructure to make it easy for everyone to thrive in the open system of the future.
         </p>
-        <p id="paragraph2">Skinviewer is a marketplace to trade virtual items and technology for building metaverses. Based on the
+        <p id="paragraph2">Skinviewer is a marketplace to trade virtual items and technology for building metaverses.
+          Based on the
           latest Newzoo report it’s a Top-3 blockchain-based marketplace.
           Skinviewer builds bridges between real and virtual worlds by creating a cross-chain platform that accumulates
           multiple metaverses for brands, influencers, video games, eSports organizations, broadcasters, and all kinds
           of entities. Skinviewer is connecting the entertainment industry with the global metaverse. </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
-        <img class="w-full rounded-lg" src="/assets/dragonLore.png" alt="office content 1" id="image1">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/ak_empress.png" alt="office content 2" id="image2">
+        <img class="w-full rounded-lg" src="/assets/howl.png" alt="office content 1" id="image1">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/lotusfront.png" alt="office content 1" id="image1">
+        <img class="w-full rounded-lg" src="/assets/ak_empress.png" alt="office content 2" id="image2">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/medusa.png" alt="office content 1" id="image2">
       </div>
     </div>
   </section>
 
-  
+
 
   <!-- ====== Cards Section Start -->
   <section class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[120px] lg:pb-20">
-    <h1 class="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-900 flex-center text-center ">View our latest skins</h1>
+    <h1
+      class="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-900 flex-center text-center ">
+      View our latest skins</h1>
     <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap ">
         <div class="w-full px-4 md:w-1/2 xl:w-1/3">
           <div class="mb-10 overflow-hidden rounded-lg bg-white border">
-            
+
             <div class="image-container">
-            <img id="staticImage" src="../assets/butterfly.png" alt="image" class="w-full" style="display: block;"/>
+              <img id="staticImage" src="../assets/butterfly.png" alt="image" class="w-auto h-auto" />
             </div>
 
             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
@@ -132,210 +159,190 @@
               </p>
 
 
-               
+
               <button id="previewButton" onclick="toggleAFrameBoxVisibility()"
                 class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-gray-900">
                 Hide 3D Preview
-            </button>
+              </button>
 
-              
-             
+
+
               <div id="aframeScene1" class="w-98 h-96">
 
-              
+
                 <a-scene id="aframeBox" class="aframebox" embedded>
-                  
-                  <a-entity
-                    id="cameraContainer"
-                    position="50 230 0"
-                    rotation="0 0 0"
-                  >
+
+                  <a-entity id="cameraContainer" position="50 230 0" rotation="0 0 0">
                     <a-camera></a-camera>
                   </a-entity>
 
-                  
-                  
-                  <a-entity
-                    id="rotatingObject"
+
+
+                  <a-entity id="rotatingObject"
                     obj-model="obj: url(../assets/objects/butterfly_knife/butterfly.obj); mtl: url(../assets/objects/butterfly_knife/butterfly.mtl); stl: url(../assets/objects/butterfly.stl)"
-                    rotation="0 0 0"
-                  ></a-entity>
+                    rotation="0 0 0"></a-entity>
                 </a-scene>
               </div>
-              
-                
-             
+
+
+
 
 
             </div>
           </div>
         </div>
-          <div class="w-full px-4 md:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-lg bg-white border">
-              <img src="../assets/lotus.png" alt="image"
-                class="w-full" />
-              <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
-                <h3>
-                  <a href="javascript:void(0)"
-                    class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
-                    Ak-47  - Wild Lotus
-                  </a>
-                </h3>
-                <p class="text-body-color mb-7 text-base leading-relaxed">
-                  Powerful and reliable, the AK-47 is one of the most popular assault rifles in the world. It is most deadly in short, controlled bursts of fire. A custom paint job of an orange lotus has been hand painted over a green base. Muck or nettles
- 
-The St. Marc Collection
-                </p>
-                <button id="previewButtonAk" onclick="toggleAFrameBoxVisibilityAk()"
+        <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+          <div class="mb-10 overflow-hidden rounded-lg bg-white border">
+            <img src="../assets/lotus.png" alt="image" class="w-auto h-auto" />
+            <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+              <h3>
+                <a href="javascript:void(0)"
+                  class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
+                  Ak-47 - Wild Lotus
+                </a>
+              </h3>
+              <p class="text-body-color mb-7 text-base leading-relaxed">
+                Powerful and reliable, the AK-47 is one of the most popular assault rifles in the world. It is most
+                deadly in short, controlled bursts of fire. A custom paint job of an orange lotus has been hand painted
+                over a green base. Muck or nettles
+
+                The St. Marc Collection
+              </p>
+              <button id="previewButtonAk" onclick="toggleAFrameBoxVisibilityAk()"
                 class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-gray-900">
                 Hide 3D Preview
-            </button>
+              </button>
 
               <div id="aframeScene2" class="w-98 h-96">
 
-              
+
                 <a-scene id="aframeBoxAk" class="aframebox" embedded>
-                 
-                  <a-entity
-                    position="0 400 0"
-                    rotation="0 0 0"
-                    camera
-                    
-                  >
+
+                  <a-entity position="0 400 0" rotation="0 0 0" camera>
                     <a-camera></a-camera>
                   </a-entity>
 
-                  
-                  
-                  <a-entity
-                    
-                    gltf-model="url(../assets/objects/wild_lotus/scene.gltf)"
-                    rotation="0 90 0"
-                    position="-500 400 -1400"
-                    scale="0.5 0.5 0.5"
-                  ></a-entity>
+
+
+                  <a-entity gltf-model="url(../assets/objects/wild_lotus/scene.gltf)" rotation="0 90 0"
+                    position="-500 400 -1400" scale="0.5 0.5 0.5"></a-entity>
                 </a-scene>
               </div>
 
-              </div>
             </div>
           </div>
-          <div class="w-full px-4 md:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-lg bg-white border">
-              <img src="../assets/dragonLore.png" alt="image"
-                class="w-full" />
-              <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
-                <h3>
-                  <a href="javascript:void(0)"
-                    class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
-                   AWP - Dragon Lore
-                  </a>
-                </h3>
-                <p class="text-body-color mb-7 text-base leading-relaxed">
-                  High risk and high reward, the infamous AWP is recognizable by its signature report and one-shot, one-kill policy. It has been custom painted with a knotwork dragon. 200 keys could never unlock its secrets
- 
-The Cobblestone Collection
-                </p>
-                <button id="previewButtonDlore" onclick="toggleAFrameBoxVisibilityDlore()"
+        </div>
+        <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+          <div class="mb-10 overflow-hidden rounded-lg bg-white border">
+            <img src="../assets/dragonLore.png" alt="image" class="w-auto h-auto" />
+            <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+              <h3>
+                <a href="javascript:void(0)"
+                  class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
+                  AWP - Dragon Lore
+                </a>
+              </h3>
+              <p class="text-body-color mb-7 text-base leading-relaxed">
+                High risk and high reward, the infamous AWP is recognizable by its signature report and one-shot,
+                one-kill policy. It has been custom painted with a knotwork dragon. 200 keys could never unlock its
+                secrets
+
+                The Cobblestone Collection
+              </p>
+              <button id="previewButtonDlore" onclick="toggleAFrameBoxVisibilityDlore()"
                 class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-gray-900">
                 Hide 3D Preview
-            </button>
+              </button>
 
-            <div id="aframeScene3" class="w-98 h-96">
+              <div id="aframeScene3" class="w-98 h-96">
 
-              
+
                 <a-scene id="aframeBoxDlore" class="dlorebox" embedded>
-                    <!-- Camera -->
-                    <a-entity
-                      camera
-                      position="0 0 0"
-                    ></a-entity>
-        
-                    <a-entity
-                    gltf-model="url(../assets/objects/dragonlore/scene.gltf)"
-                    rotation="0 90 0"
-                    position="-40 380 -130"
-                    scale="100 100 100"
-                    ></a-entity>
-                  </a-scene>
+                  <!-- Camera -->
+                  <a-entity camera position="0 0 0"></a-entity>
+
+                  <a-entity gltf-model="url(../assets/objects/dragonlore/scene.gltf)" rotation="0 90 0"
+                    position="-40 380 -130" scale="100 100 100"></a-entity>
+                </a-scene>
               </div>
 
-              
-              </div>
+
             </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
   <!-- ====== Cards Section End -->
 
-  <section class="bg-gray-100 py-8">
+  <section class="bg-gray-100 py-8" id="popular-section">
     <div class="container mx-auto">
       <div class="flex items-center mb-4">
-      <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
-      <h2 class="text-4xl font-semibold mb-4 dark:text-gray-900 text-gray-900">Popular CS:GO Items</h2>
-    </div>
-      <div class="carousel-container overflow-x-auto"> 
-      <div class="flex gap-4">
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/redline_popular1.png" alt="CS:GO Item 1" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Redline </p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Asiimov</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Asiimov</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Asiimov</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Asiimov</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Asiimov</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Asiimov</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-          <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-          <p class="text-center">Ak-47 | Asiimov</p>
-        </div>
+        <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
+        <h2 class="text-4xl font-semibold mb-4 dark:text-gray-900 text-gray-900">Popular CS:GO Items</h2>
+      </div>
+      <div class="carousel-container overflow-x-auto">
+        <div class="flex gap-4">
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/redline_popular1.png" alt="CS:GO Item 1" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Redline </p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Asiimov</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Asiimov</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Asiimov</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Asiimov</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Asiimov</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Asiimov</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
+            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <p class="text-center">Ak-47 | Asiimov</p>
+          </div>
 
-        
-        
+
+
+        </div>
       </div>
     </div>
-    </div>
   </section>
-  
+
 
 
 
   <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
       <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+        <a href="index.html" class="flex items-center mb-4 sm:mb-0">
           <img src="/assets/logoSite.png" class="h-8 mr-3" alt="Flowbite Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">Popular skins </a>
+            <a href="index.html#popular-section" class="mr-4 hover:underline md:mr-6 ">Popular skins </a>
           </li>
           <li>
             <a href="https://csgostash.com/" class="mr-4 hover:underline md:mr-6">Marketplace</a>
           </li>
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">Licences</a>
+            <a href="https://github.com/Steelings/skinviewer/blob/main/assets/objects/dragonlore/license.txt"
+              class="mr-4 hover:underline md:mr-6 ">Licences</a>
           </li>
           <li>
             <a href="/rss/rss.xml" class="mr-4 hover:underline md:mr-6 ">RSS Feed</a>
@@ -343,14 +350,15 @@ The Cobblestone Collection
           <li>
             <a href="contact.html" class="hover:underline">Contact</a>
           </li>
-          
+
         </ul>
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="index.html"
           class="hover:underline">Skinviewer™</a>. All Rights Reserved.</span>
     </div>
   </footer>
+
   <script src="script.js"></script>
 
 </body>
