@@ -84,29 +84,69 @@ function toggleAFrameBoxVisibilityDlore() {
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollToPopularLink = document.getElementById("scrollToPopular");
 
-const aframeBoxDlore = document.getElementById("aframeBoxDlore");
+  scrollToPopularLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    const targetSection = document.getElementById("popular-section");
 
-fetch('RSS_FEED_URL')
-      .then((response) => response.text())
-      .then((xml) => {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xml, 'text/xml');
-        const items = xmlDoc.querySelectorAll('item');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
-        let rssHTML = '<ul>';
-        items.forEach((item) => {
-          const title = item.querySelector('title').textContent;
-          const link = item.querySelector('link').textContent;
-          rssHTML += `<li><a href="${link}" target="_blank">${title}</a></li>`;
-        });
-        rssHTML += '</ul>';
+function subscribe(event) {
+  event.preventDefault();
 
-        document.getElementById('rss-feed').innerHTML = rssHTML;
-      })
-      .catch((error) => {
-        console.error('Error fetching RSS feed:', error);
-      });
+  const emailInput = document.getElementById('email');
+  const email = emailInput.value;
+
+
+  fetch('/subscribe', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email: email }),
+  })
+    .then(response => {
+      if (response.ok) {
+        alert('Subscription successful! Please check your email for confirmation.');
+      } else {
+        alert('Subscription failed. Please try again later.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again later.');
+    });
+}
+
+
+
+// fetch('RSS_FEED_URL')
+//       .then((response) => response.text())
+//       .then((xml) => {
+//         const parser = new DOMParser();
+//         const xmlDoc = parser.parseFromString(xml, 'text/xml');
+//         const items = xmlDoc.querySelectorAll('item');
+
+//         let rssHTML = '<ul>';
+//         items.forEach((item) => {
+//           const title = item.querySelector('title').textContent;
+//           const link = item.querySelector('link').textContent;
+//           rssHTML += `<li><a href="${link}" target="_blank">${title}</a></li>`;
+//         });
+//         rssHTML += '</ul>';
+
+//         document.getElementById('rss-feed').innerHTML = rssHTML;
+//       })
+//       .catch((error) => {
+//         console.error('Error fetching RSS feed:', error);
+//       });
 
 
 

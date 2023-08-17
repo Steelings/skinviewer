@@ -14,14 +14,11 @@
 </head>
 
 <body>
-
-
-
   <header>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="index.html" class="flex items-center">
-          <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
+          <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="logo website Skinviewer" />
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
         </a>
         <div class="flex items-center lg:order-2">
@@ -54,7 +51,7 @@
                 aria-current="page">Home</a>
             </li>
             <li>
-              <a href="index.html#popular-section"
+              <a href="#" id="scrollToPopular"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Popular
                 skins</a>
             </li>
@@ -88,16 +85,18 @@
           our RSS-feed</h2>
         <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">Stay updated
           with the latest skin additions to our site, for free!</p>
-        <form action="../rss/rss.xml">
+        <form id="subscriptionForm" action="#" onsubmit="subscribe(event)">
           <div class="flex justify-center mx-auto mb-3 space-x-4 max-w-screen-sm sm:flex sm:space-x-2 items-center">
             <a href="../rss/rss.xml">
               <img src="../assets/rss.png" class="w-10 h-10">
             </a>
-            <a href="../rss/rss.xml" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <input
+              class="p-3 w-auto text-sm text-gray-900 bg-gray-50 border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="Enter your email" type="email" id="email" required="">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Subscribe
-            </a>
+            </button>
           </div>
-
         </form>
       </div>
     </div>
@@ -121,17 +120,21 @@
           of entities. Skinviewer is connecting the entertainment industry with the global metaverse. </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
-        <img class="w-full rounded-lg" src="/assets/howl.png" alt="office content 1" id="image1">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/lotusfront.png" alt="office content 1" id="image1">
-        <img class="w-full rounded-lg" src="/assets/ak_empress.png" alt="office content 2" id="image2">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/medusa.png" alt="office content 1" id="image2">
+        <img class="w-full rounded-lg" src="/assets/howl.png"
+          alt="Counter Strike: Global Offensive, image of the M4A4 Howl weapon skin" id="image1">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/lotusfront.png"
+          alt="Counter Strike: Global Offensive, image of the Ak-47 Wild Lotus weapon skin" id="image1">
+        <img class="w-full rounded-lg" src="/assets/ak_empress.png"
+          alt="Counter Strike: Global Offensive, image of the Ak-47 Empress weapon skin" id="image2">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/medusa.png"
+          alt="Counter Strike: Global Offensive, image of the AWP Medusa weapon skin" id="image2">
       </div>
     </div>
   </section>
 
 
 
-  <!-- ====== Cards Section Start -->
+  <!-- Cards Section Start -->
   <section class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[120px] lg:pb-20">
     <h1
       class="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-900 flex-center text-center ">
@@ -142,12 +145,13 @@
           <div class="mb-10 overflow-hidden rounded-lg bg-white border">
 
             <div class="image-container">
-              <img id="staticImage" src="../assets/butterfly.png" alt="image" class="w-auto h-auto" />
+              <img id="staticImage" src="../assets/butterfly.png" class="w-auto h-auto"
+                alt="Image of a butterfly knife in CS:GO" />
             </div>
 
             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
               <h3>
-                <a href="javascript:void(0)"
+                <a
                   class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
                   Butterfly knife - Fade
                 </a>
@@ -158,45 +162,33 @@
                 allowing rapid deployment or concealment. As a result, butterfly knives are outlawed in many countries.
               </p>
 
-
-
               <button id="previewButton" onclick="toggleAFrameBoxVisibility()"
                 class="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-gray-900">
                 Hide 3D Preview
               </button>
 
 
-
-              <div id="aframeScene1" class="w-98 h-96">
-
-
+              <div id="aframeScene1" class="w-full h-full">
                 <a-scene id="aframeBox" class="aframebox" embedded>
-
                   <a-entity id="cameraContainer" position="50 230 0" rotation="0 0 0">
                     <a-camera></a-camera>
                   </a-entity>
-
-
-
                   <a-entity id="rotatingObject"
                     obj-model="obj: url(../assets/objects/butterfly_knife/butterfly.obj); mtl: url(../assets/objects/butterfly_knife/butterfly.mtl); stl: url(../assets/objects/butterfly.stl)"
-                    rotation="0 0 0"></a-entity>
+                    rotation="0 0 0">
+                  </a-entity>
                 </a-scene>
               </div>
-
-
-
-
-
             </div>
           </div>
         </div>
         <div class="w-full px-4 md:w-1/2 xl:w-1/3">
           <div class="mb-10 overflow-hidden rounded-lg bg-white border">
-            <img src="../assets/lotus.png" alt="image" class="w-auto h-auto" />
+            <img src="../assets/lotus.png" class="w-auto h-auto"
+              alt="Counter Strike: Global Offensive, image of the Ak-47 Wild Lotus weapon skin" />
             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
               <h3>
-                <a href="javascript:void(0)"
+                <a
                   class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
                   Ak-47 - Wild Lotus
                 </a>
@@ -213,31 +205,25 @@
                 Hide 3D Preview
               </button>
 
-              <div id="aframeScene2" class="w-98 h-96">
-
-
+              <div id="aframeScene2" class="w-full h-full">
                 <a-scene id="aframeBoxAk" class="aframebox" embedded>
-
                   <a-entity position="0 400 0" rotation="0 0 0" camera>
                     <a-camera></a-camera>
                   </a-entity>
-
-
-
                   <a-entity gltf-model="url(../assets/objects/wild_lotus/scene.gltf)" rotation="0 90 0"
                     position="-500 400 -1400" scale="0.5 0.5 0.5"></a-entity>
                 </a-scene>
               </div>
-
             </div>
           </div>
         </div>
         <div class="w-full px-4 md:w-1/2 xl:w-1/3">
           <div class="mb-10 overflow-hidden rounded-lg bg-white border">
-            <img src="../assets/dragonLore.png" alt="image" class="w-auto h-auto" />
+            <img src="../assets/dragonLore.png" class="w-auto h-auto"
+              alt="Image of the Counter Strike Global Offensive AWP sniper weapon skin" />
             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
               <h3>
-                <a href="javascript:void(0)"
+                <a
                   class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
                   AWP - Dragon Lore
                 </a>
@@ -254,70 +240,73 @@
                 Hide 3D Preview
               </button>
 
-              <div id="aframeScene3" class="w-98 h-96">
-
-
+              <div id="aframeScene3" class="w-full h-full">
                 <a-scene id="aframeBoxDlore" class="dlorebox" embedded>
-                  <!-- Camera -->
-                  <a-entity camera position="0 0 0"></a-entity>
-
+                  <a-entity position="0 0 0" rotation="0 0 0" wasd-controls look-controls>
+                    <a-camera></a-camera>
+                  </a-entity>
                   <a-entity gltf-model="url(../assets/objects/dragonlore/scene.gltf)" rotation="0 90 0"
                     position="-40 380 -130" scale="100 100 100"></a-entity>
                 </a-scene>
               </div>
-
-
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- ====== Cards Section End -->
+  <!-- Cards Section End -->
 
   <section class="bg-gray-100 py-8" id="popular-section">
     <div class="container mx-auto">
-      <div class="flex items-center mb-4">
-        <img src="/assets/logoSite.png" class="mr-3 h-6 sm:h-9" alt="skinviewer Logo" />
-        <h2 class="text-4xl font-semibold mb-4 dark:text-gray-900 text-gray-900">Popular CS:GO Items</h2>
+      <div class="flex items-center justify-center mb-4">
+        <img src="/assets/logoSite.png" class="mr-3 w-auto  sm:h-6 md:h-8 xl: h-10" alt="logo website Skinviewer" />
+        <h2 class="text-4xl mb-0 dark:text-gray-900 text-gray-900 font-extrabold leading-none tracking-tight">Popular
+          CS:GO Items</h2>
       </div>
       <div class="carousel-container overflow-x-auto">
-        <div class="flex gap-4">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-center p-8 xl:col-span-9">
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/redline_popular1.png" alt="CS:GO Item 1" class="w-full mb-2 rounded-md">
+            <img src="../assets/redline_popular1.png" class="w-full mb-2 rounded-md"
+              alt="First image of carousel of popular weapon skins, Ak-47 Redline">
             <p class="text-center">Ak-47 | Redline </p>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
+            <img src="../assets/asiimove_popular2.png" class="w-full mb-2 rounded-md"
+              alt="Second image of carousel of popular weapon skins, Ak-47 Asiimov">
             <p class="text-center">Ak-47 | Asiimov</p>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-            <p class="text-center">Ak-47 | Asiimov</p>
+            <img src="../assets/neon_popular3.png" class="w-full mb-2 rounded-md"
+              alt="Third image of carousel of popular weapon skins, Ak-47 Neon Rider">
+            <p class="text-center">Ak-47 | Neon Rider</p>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-            <p class="text-center">Ak-47 | Asiimov</p>
+            <img src="../assets/revoltion_popular4.png" class="w-full mb-2 rounded-md"
+              alt="Fourth image of carousel of popular weapon skins, Ak-47 Neon Revolution">
+            <p class="text-center">Ak-47 | Neon Revolution</p>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-            <p class="text-center">Ak-47 | Asiimov</p>
+            <img src="../assets/emperor_popular5.png" class="w-full mb-2 rounded-md"
+              alt="Fifth image of carousel of popular weapon skins, M4A4 The Emperor">
+            <p class="text-center">M4A4 | The Emperor</p>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-            <p class="text-center">Ak-47 | Asiimov</p>
+            <img src="../assets/rider_poular6.png" class="w-full mb-2 rounded-md"
+              alt="Sixth image of carousel of popular weapon skins, M4A4 Neo-Noir">
+            <p class="text-center">M4A4 | Neo-Noir</p>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-            <p class="text-center">Ak-47 | Asiimov</p>
+            <img src="../assets/kconfirmed_popular7.png" class="w-full mb-2 rounded-md"
+              alt="Seventh image of carousel of popular weapon skins, USP-S Kill Confirmed">
+            <p class="text-center">USP | Kill Confirmed</p>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md flex-none w-48">
-            <img src="../assets/asiimove_popular2.png" alt="CS:GO Item 2" class="w-full mb-2 rounded-md">
-            <p class="text-center">Ak-47 | Asiimov</p>
+            <img src="../assets/rustcoat_popular8.png" class="w-full mb-2 rounded-md"
+              alt="Eighth image of carousel of popular weapon skins, Karambit melee weapon, in a rusted coat">
+            <p class="text-center">Karambit | Rust Coat</p>
           </div>
-
-
-
         </div>
       </div>
     </div>
@@ -330,19 +319,19 @@
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
       <div class="sm:flex sm:items-center sm:justify-between">
         <a href="index.html" class="flex items-center mb-4 sm:mb-0">
-          <img src="/assets/logoSite.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          <img src="/assets/logoSite.png" class="h-8 mr-3" alt="logo Skinviewer website" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Skinviewer</span>
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
           <li>
-            <a href="index.html#popular-section" class="mr-4 hover:underline md:mr-6 ">Popular skins </a>
+            <a href="index.html" class="mr-4 hover:underline md:mr-6">Popular skins</a>
           </li>
           <li>
             <a href="https://csgostash.com/" class="mr-4 hover:underline md:mr-6">Marketplace</a>
           </li>
           <li>
             <a href="https://github.com/Steelings/skinviewer/blob/main/assets/objects/dragonlore/license.txt"
-              class="mr-4 hover:underline md:mr-6 ">Licences</a>
+              class="mr-4 hover:underline md:mr-6 ">Licences used skins</a>
           </li>
           <li>
             <a href="/rss/rss.xml" class="mr-4 hover:underline md:mr-6 ">RSS Feed</a>
@@ -358,9 +347,8 @@
           class="hover:underline">Skinviewer™</a>. All Rights Reserved.</span>
     </div>
   </footer>
-
   <script src="script.js"></script>
-
+  <script src="hamburger.js"></script>
 </body>
 
 </html>
