@@ -106,23 +106,68 @@ function subscribe(event) {
 
 
   fetch('/subscribe', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email }),
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ email: email }),
+})
+  .then(response => {
+    if (response.ok) {
+      const successAlert = document.createElement('div');
+      successAlert.className = 'bg-green-500 text-white p-4 rounded shadow-md';
+      successAlert.textContent = 'Subscription successful! Please check your email for confirmation.';
+      document.body.appendChild(successAlert);
+    } else {
+      const errorAlert = document.createElement('div');
+      errorAlert.className = 'bg-red-500 text-white p-4 rounded shadow-md';
+      errorAlert.textContent = 'Subscription failed. Please try again later.';
+      document.body.appendChild(errorAlert);
+    }
   })
-    .then(response => {
-      if (response.ok) {
-        alert('Subscription successful! Please check your email for confirmation.');
-      } else {
-        alert('Subscription failed. Please try again later.');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again later.');
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again later.');
+  });
+}
+
+const subscriptionForm = document.getElementById('subscriptionForm');
+const alertContainer = document.getElementById('alert-container');
+
+subscriptionForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  
+  const email = document.getElementById('email').value;
+
+  try {
+    const response = await fetch('/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: email }),
     });
+
+    if (response.ok) {
+      showAlert('Subscription successful! Please check your email for confirmation.', 'bg-green-500');
+    } else {
+      showAlert('Subscription failed. Please try again later.', 'bg-red-500');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    showAlert('An error occurred. Please try again later.', 'bg-red-500');
+  }
+});
+
+function showAlert(message, bgColorClass) {
+  const alertElement = document.createElement('div');
+  alertElement.className = `bg-opacity-75 ${bgColorClass} text-white p-4 rounded shadow-md`;
+  alertElement.textContent = message;
+  alertContainer.appendChild(alertElement);
+
+  setTimeout(() => {
+    alertElement.remove();
+  }, 3500);
 }
 
 
